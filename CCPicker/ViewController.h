@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CCPicker.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController<CCPickerDelegate>
+
+@property (strong, nonatomic) IBOutlet UILabel *label;
+@property IBOutlet CCPicker *picker;
+@property (strong, nonatomic) IBOutlet UIPageControl *pageController;
+
+@property (nonatomic, retain) NSMutableArray *items;
+- (IBAction)changeValue:(id)sender;
 
 @end
