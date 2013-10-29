@@ -44,10 +44,11 @@
         self.pickerDelegate = nil;
         
         // Centering picker frame
-        int x = (self.frame.size.width / 4) ;
+        int x = 5 ;
         int y = (self.frame.size.height - (self.frame.size.height - 10)) / 2;
         
-        _scrollPicker = [[CCScrollViewPicker alloc] initWithFrame:CGRectMake(x, y, self.frame.size.width/2, self.frame.size.height-10)];
+        _scrollPicker = [[CCScrollViewPicker alloc] initWithFrame:CGRectMake(x, y, self.frame.size.width-10, self.frame.size.height-22)];
+        //_scrollPicker.backgroundColor = [UIColor redColor];
         
         [self addSubview:_scrollPicker];
     }
